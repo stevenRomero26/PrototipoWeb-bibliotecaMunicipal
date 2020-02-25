@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        position: relative;
+        top: -80px;
+        text-align: center;
+        font-size: 20px;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgba(34, 34, 34, 0.815); 
+    }
+    @keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+    nav{
+     width: 100%;
+    height: 61px;
+    border: 1px solid #313131;
+    background-color: rgb(24, 23, 53);
+    }
+    nav li  {
+    position: relative;
+    top: 7px;
+    list-style: none;
+    display: block;
+    font-family: Arial;
+    font-size: 20px;
+      }
+     nav li a:hover {
+     background-color: #4dbb7f;
+     margin-top: -2;
+     padding-bottom: 12px;
+     }
+    div{
+    text-align: center;
+    height: 90px;
+    background-color: rgb(53, 151, 53);
+    } 
+    iframe{
+      
+        position: relative;
+        left: 33%; 
+    }
+    nav a{
+        position: relative;
+        left: 660px;
+        color: #fff;
+        text-decoration: none;
+        float: left;
+        padding: 10px;
+        background-color: rgb(24, 23, 53);
+    }
+   #body{
+        background-image: url(https://bbl-bdb.s3.amazonaws.com/constance/uploads/panoramica_2880x1180.jpg);
+    }
+    h1{
+        position: relative;
+        text-align: center;
+        top: -36px;
+        font-size: 49px;;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgba(34, 34, 34, 0.815); 
+    }
+    img{
+        width: 220px;
+        height: 240px;
+    }
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    #libros{
+        list-style: decimal-leading-zero;
+    }
+    h2{
+    width: 600px;
+    position: relative;
+    top: -80px;
+    left: 20px;
+    color: #FFB03B;
+    font-size: 49px;;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgba(82, 70, 38, 0.274); 
+    }
+    #Autores{
+        font-size: 23px;
+        list-style: circle;
+        -webkit-text-stroke: 2px rgb(77, 77, 77);
+        color:transparent ;
+        position: relative;
+        top: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ul.menu_1 {
+        margin: 20px;
+        padding: 0;
+    }
+
+    ul.menu_1 li {
+        list-style-type: none;
+        line-height: 1.6;
+        background: #CCC;
+        margin: 0 0 10px 0;
+        padding: 4px 8px;
+        border: 1px solid #666;
+    }
+    ul.menu_1 li a{
+        color: #FFF !important;
+    }
+   
+    #g{
+      color: rgb(69, 69, 71);  
+      position: relative;
+      left: 25px;
+    }
+    figure li {
+        
+    display: inline-block;
+    position: relative;
+    left: 200px;
+    }
+    figure{
+        
+        width: 70%;
+    }
+    figure li :hover{
+        filter: sepia(60%);
+        
+    }
+    
+    </style>
+<body>
+    <header>
+       <nav >
+             <ul><li><a href="#">Inicio</a></li>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Prestamos</a></li>
+                <li><a href="#">estudiantes</a></li>
+      </ul>
+        </nav>
+        <br> 
+         <h2>biblioteca municipal</h2>
+         <p>BibliotecaMunicipalSantaMarta@gmail.com</p>
+         </header>
+<main>
+      <br>
+    <h1>listados de Estudiantes</h1>
+       {% for e in lista_Estdiantes %}
+       <ul class="menu_1">
+        <li id="estudiantes">{{e.nombre }}</li>
+        {% endfor %}
+    
+    </ul>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/Q5f-XfbMlds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </main>
+</body>
+</html>
